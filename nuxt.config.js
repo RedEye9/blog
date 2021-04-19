@@ -1,5 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
 import { createClient } from './plugins/contentful.js'
+
+const environment = process.env.NODE_ENV || "development";
 let envSet = {}
 if (environment !== 'production') {
   envSet = require(`./env.${environment}.js`)
